@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" type="text/css" href="assets/application.css")
+  body
+    .wrapper
+      header
+        h1.logo Luxcel Bioscience
+        nav
+          ul
+            li Home
+            li: a(href="") Contact Us
+            li: a(href="") Site Map
+      .banner
+        h2 Illumintaing Discovery
+      nav.main-nav
+        ul
+          li: a(href="") Company
+          li: a(href="") Products
+          li: a(href="") Downloads
+          li: a(href="") Technical Support
+          li
+            a(href="") Technology portfolio
+            ul.dropdown
+              li: a(href="") Introduction
+              li: a(href="") Phosphrecent Label Technology
+              li: a(href="") RST
+              li: a(href="") O2 Sensor Technology
+      .content
+        section
+          h2 Company
+          nav
+            ul
+              li: a.active(href="") About Us
+              li: a(href="") Management
+              li: a(href="") Investor Relations
+              li: a(href="") Distributors
+              li: a(href="") Contact Us
+        main
+          nav.breadcrumbs
+            ul
+              li: a(href="") Home
+              li: a(href="") Company
+              li: a(href="") About Us
+          h2 About Us
+          each article in [1,2]
+            article
+              h1 Dr. Richard Fernandes, Ph.D, MBA - Chief Executive Officer and Co-Founder
+              img(src="assets/img/photo.png" alt="Richard")
+              p.
+                Complexity. That is reason enough to avoid deep nesting.
+                It’s not hard to avoid deep nesting. If you have deep nesting, you can redesign
+                the tests performed in the if and else clauses or you can break code into simpler
+                routines. The following sections present several ways to reduce the nesting
+                depth.
+                Simplify a nested if by retesting part of the condition
+                If the nesting gets too deep, you can decrease the number of nesting levels by
+                retesting some of the conditions. Here’s a code example with nesting that’s deep
+                enough to warrant restructuring:
+          nav.pages
+            ul
+              li: a(href="") Company
+              li: a(href="") Products
+              li: a(href="") Downloads
+              li: a(href="") Technical Support
+              li Technology portfolio
+      footer
+        p &copy; 2007 Luxcel Productions Ltd.
+        p Lee Maltings, UCC
+        p Tel: +352(0)21-4904257 | Email: info@luxcel.com
+        .logo Luxcel Bioscience
+
+

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+body{
+  background-color: #ccc;
+}
+
+.wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: white;
+}
+$link-color: #0b4367;
+a, a:visited {
+  color: $link-color;
+}
+
+.logo{
+  background: url(img/logo.png) no-repeat center center;
+  width: 174px;
+  height: 74px;
+  color: transparent;
+}
+
+@mixin clear {
+  &::after {
+    content:"";
+    clear: both;
+    display: block;
+  }
+}
+
+header{
+  @include clear;
+  padding: 25px;
+  position: relative;
+  .logo {
+    position: absolute;
+    top: 0;
+  }
+  nav {
+    @include clear;
+  }
+  ul {
+    float: right;
+  }
+  li {
+    color: $link-color;
+    font-size: 0.688em;
+    float: left;
+    margin-left: 30px;
+    &::before{
+      content: "|";
+      position: relative;
+      right: 15px;
+    }
+    &:first-child::before{
+      content: "";
+    }
+  }
+}
+
+.banner{
+  background: url(img/banner.png) center center no-repeat;
+  padding: 45px;
+
+  h2 {
+    font-size: 1.875em;
+    color: white;
+    font-style: italic;
+  }
+}
+
+@mixin background-gradient($start, $stop) {
+  background: $start; /* Old browsers */
+  background: -moz-linear-gradient(top, $start 0%, $start 25%, $stop 75%, $stop 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(50%,$start), color-stop(50%,$stop), color-stop(100%,$stop)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $start 0%, $start 25%,$stop 75%, $stop 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$stop',GradientType=0 ); /* IE6-9 */
+}
+
+.main-nav {
+  padding: 0 0px 0 225px;
+  border-bottom: 5px solid #a3a6d4;
+  @include background-gradient(#edeef7,#d1d2eb);
+  > ul > li {
+    display: inline-block;
+    position: relative;
+  }
+  > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: bold 0.875em "Myriad Pro";
+    text-shadow: 0 1px 1px white;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 -2px;
+    &:hover, &:focus, &:active {
+      color: white;
+      text-shadow: none;
+      @include background-gradient(#b6d8e6,#458ab0);
+    }
+  }
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #9fcee0;
+  width: calc(100% + 4px);
+  left: -2px;
+  &:hover, a:hover + &, a:focus + &, a:active + & {
+    display: block;
+  }
+  li > a {
+    color: $link-color;
+    font: 0.688em "Tahoma";
+    padding: 8px 15px;
+    display: block;
+    &:hover, &:focus, &:active {
+      background: #256893;
+      color: white;
+    }
+  }
+}
+.content {
+  display: flex;
+}
+section {
+  float: left;
+  width: 225px;
+  min-width: 225px;
+}

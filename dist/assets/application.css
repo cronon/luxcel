@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+nav ul {
+  list-style-type: none; }
+
+body {
+  background-color: #ccc; }
+
+.wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: white; }
+
+a, a:visited {
+  color: #0b4367; }
+
+.logo {
+  background: url(img/logo.png) no-repeat center center;
+  width: 174px;
+  height: 74px;
+  color: transparent; }
+
+header {
+  padding: 25px;
+  position: relative; }
+  header::after {
+    content: "";
+    clear: both;
+    display: block; }
+  header .logo {
+    position: absolute;
+    top: 0; }
+  header nav::after {
+    content: "";
+    clear: both;
+    display: block; }
+  header ul {
+    float: right; }
+  header li {
+    color: #0b4367;
+    font-size: 0.688em;
+    float: left;
+    margin-left: 30px; }
+    header li::before {
+      content: "|";
+      position: relative;
+      right: 15px; }
+    header li:first-child::before {
+      content: ""; }
+
+.banner {
+  background: url(img/banner.png) center center no-repeat;
+  padding: 45px; }
+  .banner h2 {
+    font-size: 1.875em;
+    color: white;
+    font-style: italic; }
+
+.main-nav {
+  padding: 0 0px 0 225px;
+  border-bottom: 5px solid #a3a6d4;
+  background: #edeef7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edeef7), color-stop(50%, #edeef7), color-stop(50%, #d1d2eb), color-stop(100%, #d1d2eb));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$stop',GradientType=0 );
+  /* IE6-9 */ }
+  .main-nav > ul > li {
+    display: inline-block;
+    position: relative; }
+  .main-nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: bold 0.875em "Myriad Pro";
+    text-shadow: 0 1px 1px white;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 -2px; }
+    .main-nav > ul > li > a:hover, .main-nav > ul > li > a:focus, .main-nav > ul > li > a:active {
+      color: white;
+      text-shadow: none;
+      background: #b6d8e6;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b6d8e6), color-stop(50%, #b6d8e6), color-stop(50%, #458ab0), color-stop(100%, #458ab0));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$stop',GradientType=0 );
+      /* IE6-9 */ }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #9fcee0;
+  width: calc(100% + 4px);
+  left: -2px; }
+  .dropdown:hover, a:hover + .dropdown, a:focus + .dropdown, a:active + .dropdown {
+    display: block; }
+  .dropdown li > a {
+    color: #0b4367;
+    font: 0.688em "Tahoma";
+    padding: 8px 15px;
+    display: block; }
+    .dropdown li > a:hover, .dropdown li > a:focus, .dropdown li > a:active {
+      background: #256893;
+      color: white; }
+
+.content {
+  display: flex; }
+
+section {
+  float: left;
+  width: 225px;
+  min-width: 225px; }
