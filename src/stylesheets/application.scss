@@ -16,6 +16,7 @@ body{
   margin: 0 auto;
   background-color: white;
 }
+
 $link-color: #0b4367;
 a, a:visited {
   color: $link-color;
@@ -28,7 +29,7 @@ a, a:visited {
   color: transparent;
 }
 
-@mixin clear {
+@mixin clearfix {
   &::after {
     content:"";
     clear: both;
@@ -37,31 +38,34 @@ a, a:visited {
 }
 
 header{
-  @include clear;
+  @include clearfix;
   padding: 25px;
   position: relative;
+
   .logo {
     position: absolute;
     top: 0;
   }
+
   nav {
-    @include clear;
+    @include clearfix;
   }
+
   ul {
     float: right;
   }
+}
+
+.pages {
   li {
     color: $link-color;
-    font-size: 0.688em;
-    float: left;
-    margin-left: 30px;
-    &::before{
-      content: "|";
-      position: relative;
-      right: 15px;
-    }
-    &:first-child::before{
-      content: "";
+    font: 0.688em "Tahoma";
+    display: inline-block;
+    padding: 0 0.5em;
+    border-left: 1px solid $link-color;
+
+    &:first-child{
+      border-left: none;
     }
   }
 }
@@ -95,6 +99,11 @@ header{
   > ul > li {
     display: inline-block;
     position: relative;
+    &:hover > a, &:focus > a, &:active > a {
+      color: white;
+      text-shadow: none;
+      @include background-gradient(#b6d8e6,#458ab0);
+    }
   }
   > ul > li > a {
     text-decoration: none;
@@ -104,16 +113,11 @@ header{
     padding: 10px 15px;
     display: inline-block;
     margin: 0 -2px;
-    &:hover, &:focus, &:active {
-      color: white;
-      text-shadow: none;
-      @include background-gradient(#b6d8e6,#458ab0);
-    }
   }
 }
 
 
-.dropdown {
+.dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
@@ -134,11 +138,85 @@ header{
     }
   }
 }
+
 .content {
   display: flex;
 }
-section {
+
+aside {
   float: left;
   width: 225px;
   min-width: 225px;
+  background-color: #eee;
+
+  > h2 {
+    color: white;
+    font: 1.125em "Myriad Pro";
+    text-transform: uppercase;
+    background-color: #7371b1;
+    padding: 3px 25px 5px
+  }
+  > nav > ul {
+    list-style-image: url(img/bullet.png);
+    font: 0.75em "Tahoma";
+    padding-left: 40px;
+    > li {
+      margin-top: 20px;
+
+      &.active {
+        list-style-image: url(img/active-bullet.png);
+      }
+    }
+  }
+}
+
+main {
+  padding: 10px 40px 20px;
+
+  h2{
+    font: 1.5em "Myriad Pro";
+    color: #0b4367;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.breadcrumbs {
+  ol {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1em;
+    &::after {
+      content: ">";
+      position: relative;
+      left: 0.5em;
+    }
+    &:last-child::after {
+      content: "";
+    }
+  }
+
+}
+
+article {
+  margin: 30px 0;
+  @include clearfix;
+
+  h1 {
+    color: #555393;
+    font-size: 1.125em;
+    margin-bottom: 1.5em;
+  }
+
+  img {
+    float: left;
+    margin: 0 1.5em 1em 0;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
 }

@@ -38,17 +38,15 @@ header {
     display: block; }
   header ul {
     float: right; }
-  header li {
-    color: #0b4367;
-    font-size: 0.688em;
-    float: left;
-    margin-left: 30px; }
-    header li::before {
-      content: "|";
-      position: relative;
-      right: 15px; }
-    header li:first-child::before {
-      content: ""; }
+
+.pages li {
+  color: #0b4367;
+  font: 0.688em "Tahoma";
+  display: inline-block;
+  padding: 0 0.5em;
+  border-left: 1px solid #0b4367; }
+  .pages li:first-child {
+    border-left: none; }
 
 .banner {
   background: url(img/banner.png) center center no-repeat;
@@ -80,15 +78,7 @@ header {
   .main-nav > ul > li {
     display: inline-block;
     position: relative; }
-  .main-nav > ul > li > a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font: bold 0.875em "Myriad Pro";
-    text-shadow: 0 1px 1px white;
-    padding: 10px 15px;
-    display: inline-block;
-    margin: 0 -2px; }
-    .main-nav > ul > li > a:hover, .main-nav > ul > li > a:focus, .main-nav > ul > li > a:active {
+    .main-nav > ul > li:hover > a, .main-nav > ul > li:focus > a, .main-nav > ul > li:active > a {
       color: white;
       text-shadow: none;
       background: #b6d8e6;
@@ -107,29 +97,88 @@ header {
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$stop',GradientType=0 );
       /* IE6-9 */ }
+  .main-nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: bold 0.875em "Myriad Pro";
+    text-shadow: 0 1px 1px white;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 -2px; }
 
-.dropdown {
+.dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   background-color: #9fcee0;
   width: calc(100% + 4px);
   left: -2px; }
-  .dropdown:hover, a:hover + .dropdown, a:focus + .dropdown, a:active + .dropdown {
+  .dropdown-content:hover, a:hover + .dropdown-content, a:focus + .dropdown-content, a:active + .dropdown-content {
     display: block; }
-  .dropdown li > a {
+  .dropdown-content li > a {
     color: #0b4367;
     font: 0.688em "Tahoma";
     padding: 8px 15px;
     display: block; }
-    .dropdown li > a:hover, .dropdown li > a:focus, .dropdown li > a:active {
+    .dropdown-content li > a:hover, .dropdown-content li > a:focus, .dropdown-content li > a:active {
       background: #256893;
       color: white; }
 
 .content {
   display: flex; }
 
-section {
+aside {
   float: left;
   width: 225px;
-  min-width: 225px; }
+  min-width: 225px;
+  background-color: #eee; }
+  aside > h2 {
+    color: white;
+    font: 1.125em "Myriad Pro";
+    text-transform: uppercase;
+    background-color: #7371b1;
+    padding: 3px 25px 5px; }
+  aside > nav > ul {
+    list-style-image: url(img/bullet.png);
+    font: 0.75em "Tahoma";
+    padding-left: 40px; }
+    aside > nav > ul > li {
+      margin-top: 20px; }
+      aside > nav > ul > li.active {
+        list-style-image: url(img/active-bullet.png); }
+
+main {
+  padding: 10px 40px 20px; }
+  main h2 {
+    font: 1.5em "Myriad Pro";
+    color: #0b4367;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd; }
+
+.breadcrumbs ol {
+  list-style-type: none; }
+.breadcrumbs li {
+  display: inline-block;
+  margin-right: 1em; }
+  .breadcrumbs li::after {
+    content: ">";
+    position: relative;
+    left: 0.5em; }
+  .breadcrumbs li:last-child::after {
+    content: ""; }
+
+article {
+  margin: 30px 0; }
+  article::after {
+    content: "";
+    clear: both;
+    display: block; }
+  article h1 {
+    color: #555393;
+    font-size: 1.125em;
+    margin-bottom: 1.5em; }
+  article img {
+    float: left;
+    margin: 0 1.5em 1em 0; }
+  article p {
+    margin-bottom: 1.5em; }
