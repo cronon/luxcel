@@ -18,6 +18,7 @@ a, a:visited {
 
 .logo {
   background: url(img/logo.png) no-repeat center center;
+  background-size: contain;
   width: 174px;
   height: 74px;
   color: transparent; }
@@ -111,6 +112,7 @@ header {
   position: absolute;
   top: 100%;
   background-color: #9fcee0;
+  border-top: 5px solid #2a6c97;
   width: calc(100% + 4px);
   left: -2px; }
   .dropdown-content:hover, a:hover + .dropdown-content, a:focus + .dropdown-content, a:active + .dropdown-content {
@@ -144,7 +146,7 @@ aside {
     padding-left: 40px; }
     aside > nav > ul > li {
       margin-top: 20px; }
-      aside > nav > ul > li.active {
+      aside > nav > ul > li.active, aside > nav > ul > li:hover {
         list-style-image: url(img/active-bullet.png); }
 
 main {
@@ -182,3 +184,25 @@ article {
     margin: 0 1.5em 1em 0; }
   article p {
     margin-bottom: 1.5em; }
+
+footer {
+  background-color: #7371b1;
+  padding: 20px 25px; }
+  footer::after {
+    content: "";
+    clear: both;
+    display: block; }
+  footer .logo {
+    float: right;
+    width: 127px;
+    height: 33px; }
+  footer .info {
+    float: left; }
+  footer p {
+    color: white;
+    font: 0.688em "Tahoma"; }
+  footer .tel {
+    padding-right: 1em;
+    border-right: 1px solid #a3a6d4; }
+  footer .email {
+    padding-left: 1em; }
