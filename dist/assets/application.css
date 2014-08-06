@@ -5,8 +5,13 @@
 nav ul {
   list-style-type: none; }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
-  background-color: #ccc; }
+  background-color: #ccc;
+  margin: 0 0 79px; }
 
 .wrapper {
   max-width: 950px;
@@ -39,7 +44,7 @@ header {
     display: block; }
   header ul {
     float: right;
-    margin: 2px 8px 0 0; }
+    margin-top: 2px; }
 
 .pages li {
   color: #0b4367;
@@ -130,7 +135,11 @@ header {
       color: white; }
 
 .content {
-  display: flex; }
+  background: #eee; }
+  .content::after {
+    content: "";
+    clear: both;
+    display: block; }
 
 aside {
   float: left;
@@ -155,7 +164,10 @@ aside {
         list-style-image: url(img/active-bullet.png); }
 
 main {
-  padding: 5px 40px 20px; }
+  padding: 5px 40px 20px;
+  float: right;
+  max-width: 649px;
+  background: white; }
   main h2 {
     font: 1.5em "Myriad Pro", sans-serif;
     color: #0b4367;
@@ -199,11 +211,35 @@ article {
 
 footer {
   background-color: #7371b1;
-  padding: 20px 25px; }
+  padding: 20px 25px;
+  margin: 0 auto;
+  max-width: 900px;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  right: -50%; }
   footer::after {
     content: "";
     clear: both;
     display: block; }
+  footer::before {
+    content: "";
+    position: absolute;
+    width: 221px;
+    height: 666em;
+    background: #eee;
+    top: -666em;
+    z-index: -1;
+    left: 0; }
+  footer::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 221px);
+    height: 666em;
+    background: white;
+    top: -666em;
+    z-index: -1;
+    right: 0; }
   footer .logo {
     float: right;
     width: 127px;

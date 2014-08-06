@@ -7,12 +7,20 @@ nav ul {
   list-style-type: none;
 }
 
-body{
+$footer-height: 79px;
+$wrapper-width: 950px;
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
   background-color: #ccc;
+  margin: 0 0 $footer-height;
 }
 
 .wrapper {
-  max-width: 950px;
+  max-width: $wrapper-width;
   margin: 0 auto;
   background-color: white;
 }
@@ -54,7 +62,7 @@ header{
 
   ul {
     float: right;
-    margin: 2px 8px 0 0;
+    margin-top: 2px;
   }
 }
 
@@ -146,7 +154,8 @@ $left-column-width: 221px;
 }
 
 .content {
-  display: flex;
+  @include clearfix;
+  background: #eee;
 }
 
 $luxcel-violet: #7371b1;
@@ -183,7 +192,9 @@ aside {
 
 main {
   padding: 5px 40px 20px;
-
+  float: right;
+  max-width: 649px;
+  background: white;
   h2{
     font: 1.5em "Myriad Pro", sans-serif;
     color: #0b4367;
@@ -242,7 +253,33 @@ article {
 footer {
   background-color: $luxcel-violet;
   padding: 20px 25px;
+  margin: 0 auto;
+  max-width: $wrapper-width - 50px;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
   @include clearfix;
+  &::before{
+    content: "";
+    position: absolute;
+    width: $left-column-width;
+    height: 666em;
+    background: #eee;
+    top: -666em;
+    z-index: -1;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - #{$left-column-width});
+    height: 666em;
+    background: white;
+    top: -666em;
+    z-index: -1;
+    right: 0;
+  }
   .logo {
     float: right;
     width: 127px;
