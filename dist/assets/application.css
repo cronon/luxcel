@@ -51,70 +51,70 @@ header {
 
 .banner {
   background: url(img/banner.png) center center no-repeat;
-  padding: 45px; }
+  border-top: 4px solid #a3bed4;
+  height: 100px; }
   .banner h2 {
-    font-size: 1.875em;
+    margin: 31px 0 0 125px;
+    font: 1.875em "Myriad Pro";
     color: white;
     font-style: italic; }
 
 .main-nav {
   padding: 0 0px 0 225px;
-  border-bottom: 5px solid #a3a6d4;
   background: #edeef7;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  background: -moz-linear-gradient(top, #edeef7 0, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edeef7), color-stop(50%, #edeef7), color-stop(50%, #d1d2eb), color-stop(100%, #d1d2eb));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edeef7), color-stop(15px, #edeef7), color-stop(15px, #d1d2eb), color-stop(31px, #d1d2eb), color-stop(31px, #a3a6d4));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  background: -webkit-linear-gradient(top, #edeef7 0%, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  background: -o-linear-gradient(top, #edeef7 0%, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  background: -ms-linear-gradient(top, #edeef7 0%, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
   /* IE10+ */
-  background: linear-gradient(to bottom, #edeef7 0%, #edeef7 25%, #d1d2eb 75%, #d1d2eb 100%);
+  background: linear-gradient(to bottom, #edeef7 0%, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$stop',GradientType=0 );
-  /* IE6-9 */ }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$border',GradientType=0 );
+  /* IE6-9 */
+  height: 35px; }
   .main-nav > ul > li {
     display: inline-block;
-    position: relative; }
+    position: relative;
+    height: 35px; }
     .main-nav > ul > li:hover > a, .main-nav > ul > li:focus > a, .main-nav > ul > li:active > a {
       color: white;
       text-shadow: none;
       background: #b6d8e6;
       /* Old browsers */
-      background: -moz-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      background: -moz-linear-gradient(top, #b6d8e6 0, #b6d8e6 15px, #458ab0 15px, #458ab0 31px, #2a6c97 31px);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b6d8e6), color-stop(50%, #b6d8e6), color-stop(50%, #458ab0), color-stop(100%, #458ab0));
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b6d8e6), color-stop(15px, #b6d8e6), color-stop(15px, #458ab0), color-stop(31px, #458ab0), color-stop(31px, #2a6c97));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      background: -webkit-linear-gradient(top, #b6d8e6 0%, #b6d8e6 15px, #458ab0 15px, #458ab0 31px, #2a6c97 31px);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      background: -o-linear-gradient(top, #b6d8e6 0%, #b6d8e6 15px, #458ab0 15px, #458ab0 31px, #2a6c97 31px);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      background: -ms-linear-gradient(top, #b6d8e6 0%, #b6d8e6 15px, #458ab0 15px, #458ab0 31px, #2a6c97 31px);
       /* IE10+ */
-      background: linear-gradient(to bottom, #b6d8e6 0%, #b6d8e6 25%, #458ab0 75%, #458ab0 100%);
+      background: linear-gradient(to bottom, #b6d8e6 0%, #b6d8e6 15px, #458ab0 15px, #458ab0 31px, #2a6c97 31px);
       /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$stop',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$border',GradientType=0 );
       /* IE6-9 */ }
   .main-nav > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     font: bold 0.875em "Myriad Pro";
     text-shadow: 0 1px 1px white;
-    padding: 10px 15px;
-    display: inline-block;
-    margin: 0 -2px; }
+    padding: 7px 15px 11px;
+    display: inline-block; }
 
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   background-color: #9fcee0;
-  border-top: 5px solid #2a6c97;
-  width: calc(100% + 4px);
-  left: -2px; }
+  width: 100%; }
   .dropdown-content:hover, a:hover + .dropdown-content, a:focus + .dropdown-content, a:active + .dropdown-content {
     display: block; }
   .dropdown-content li > a {
@@ -183,7 +183,8 @@ article {
     float: left;
     margin: 0 1.5em 1em 0; }
   article p {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    font: 0.75em "Verdana", sans-serif; }
 
 footer {
   background-color: #7371b1;
@@ -201,6 +202,9 @@ footer {
   footer p {
     color: white;
     font: 0.688em "Tahoma"; }
+  footer a, footer a:visited {
+    color: inherit;
+    text-decoration: none; }
   footer .tel {
     padding-right: 1em;
     border-right: 1px solid #a3a6d4; }

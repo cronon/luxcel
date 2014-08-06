@@ -73,37 +73,40 @@ header{
 
 .banner{
   background: url(img/banner.png) center center no-repeat;
-  padding: 45px;
+  border-top: 4px solid #a3bed4;
+  height: 100px;
 
   h2 {
-    font-size: 1.875em;
+    margin: 31px 0 0 125px;
+    font: 1.875em "Myriad Pro";
     color: white;
     font-style: italic;
   }
 }
 
-@mixin background-gradient($start, $stop) {
-  background: $start; /* Old browsers */
-  background: -moz-linear-gradient(top, $start 0%, $start 25%, $stop 75%, $stop 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(50%,$start), color-stop(50%,$stop), color-stop(100%,$stop)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, $start 0%, $start 25%,$stop 75%, $stop 100%); /* IE10+ */
-  background: linear-gradient(to bottom, $start 0%, $start 25%,$stop 75%, $stop 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$stop',GradientType=0 ); /* IE6-9 */
+@mixin background-gradient($top, $bottom, $border ) {
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top, $top 0, $top 15px, $bottom 15px, $bottom 31px, $border 31px); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(15px,$top), color-stop(15px,$bottom), color-stop(31px,$bottom), color-stop(31px,$border)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* IE10+ */
+  background: linear-gradient(to bottom, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$border',GradientType=0 ); /* IE6-9 */
 }
 
 .main-nav {
   padding: 0 0px 0 225px;
-  border-bottom: 5px solid #a3a6d4;
-  @include background-gradient(#edeef7,#d1d2eb);
+  @include background-gradient(#edeef7, #d1d2eb, #a3a6d4);
+  height: 35px;
   > ul > li {
     display: inline-block;
     position: relative;
+    height: 35px;
     &:hover > a, &:focus > a, &:active > a {
       color: white;
       text-shadow: none;
-      @include background-gradient(#b6d8e6,#458ab0);
+      @include background-gradient(#b6d8e6, #458ab0, #2a6c97);
     }
   }
   > ul > li > a {
@@ -111,9 +114,8 @@ header{
     text-transform: uppercase;
     font: bold 0.875em "Myriad Pro";
     text-shadow: 0 1px 1px white;
-    padding: 10px 15px;
+    padding: 7px 15px 11px;
     display: inline-block;
-    margin: 0 -2px;
   }
 }
 
@@ -123,9 +125,7 @@ header{
   position: absolute;
   top: 100%;
   background-color: #9fcee0;
-  border-top: 5px solid #2a6c97;
-  width: calc(100% + 4px);
-  left: -2px;
+  width: 100%;
   &:hover, a:hover + &, a:focus + &, a:active + & {
     display: block;
   }
@@ -221,6 +221,7 @@ article {
 
   p {
     margin-bottom: 1.5em;
+    font: 0.75em "Verdana", sans-serif
   }
 }
 
@@ -241,6 +242,10 @@ footer {
     font: 0.688em "Tahoma";
   }
 
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
   .tel{
     padding-right: 1em;
     border-right: 1px solid #a3a6d4;
