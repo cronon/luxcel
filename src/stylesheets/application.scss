@@ -27,7 +27,7 @@ a, a:visited {
   background-size: contain;
   width: 174px;
   height: 74px;
-  color: transparent;
+  text-indent: -999em;
 }
 
 @mixin clearfix {
@@ -45,7 +45,7 @@ header{
 
   .logo {
     position: absolute;
-    top: 0;
+    top: 9px;
   }
 
   nav {
@@ -54,19 +54,21 @@ header{
 
   ul {
     float: right;
+    margin: 2px 8px 0 0;
   }
 }
 
 .pages {
   li {
     color: $link-color;
-    font: 0.688em "Tahoma";
+    font: 0.688em "Tahoma", sans-serif;
     display: inline-block;
     padding: 0 0.5em;
     border-left: 1px solid $link-color;
 
     &:first-child{
       border-left: none;
+      padding-left: 0;
     }
   }
 }
@@ -74,11 +76,12 @@ header{
 .banner{
   background: url(img/banner.png) center center no-repeat;
   border-top: 4px solid #a3bed4;
-  height: 100px;
+  height: 102px;
+  margin-top: 5px;
 
   h2 {
-    margin: 31px 0 0 125px;
-    font: 1.875em "Myriad Pro";
+    margin: 29px 0 0 127px;
+    font: 1.875em "Myriad Pro", sans-serif;
     color: white;
     font-style: italic;
   }
@@ -95,8 +98,9 @@ header{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$border',GradientType=0 ); /* IE6-9 */
 }
 
+$left-column-width: 221px;
 .main-nav {
-  padding: 0 0px 0 225px;
+  padding: 0 0px 0 $left-column-width;
   @include background-gradient(#edeef7, #d1d2eb, #a3a6d4);
   height: 35px;
   > ul > li {
@@ -112,9 +116,9 @@ header{
   > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
-    font: bold 0.875em "Myriad Pro";
+    font: bold 0.875em "Myriad Pro", sans-serif;
     text-shadow: 0 1px 1px white;
-    padding: 7px 15px 11px;
+    padding: 7px 7px 11px 15px;
     display: inline-block;
   }
 }
@@ -131,7 +135,7 @@ header{
   }
   li > a {
     color: $link-color;
-    font: 0.688em "Tahoma";
+    font: 0.688em "Tahoma", sans-serif;
     padding: 8px 15px;
     display: block;
     &:hover, &:focus, &:active {
@@ -148,24 +152,28 @@ header{
 $luxcel-violet: #7371b1;
 aside {
   float: left;
-  width: 225px;
-  min-width: 225px;
+  width: $left-column-width;
+  min-width: $left-column-width;
   background-color: #eee;
 
   > h2 {
     color: white;
-    font: 1.125em "Myriad Pro";
+    font: 1.125em "Myriad Pro", sans-serif;
     text-transform: uppercase;
     background-color: $luxcel-violet;
     padding: 3px 25px 5px
   }
+
+  > nav {
+    margin-top: 18px;
+  }
+
   > nav > ul {
     list-style-image: url(img/bullet.png);
-    font: 0.75em "Tahoma";
+    font: 0.75em "Tahoma", sans-serif;
     padding-left: 40px;
     > li {
-      margin-top: 20px;
-
+      margin-top: 12px;
       &.active, &:hover {
         list-style-image: url(img/active-bullet.png);
       }
@@ -174,12 +182,12 @@ aside {
 }
 
 main {
-  padding: 10px 40px 20px;
+  padding: 5px 40px 20px;
 
   h2{
-    font: 1.5em "Myriad Pro";
+    font: 1.5em "Myriad Pro", sans-serif;
     color: #0b4367;
-    padding: 15px 0;
+    padding: 15px 0 10px;
     border-bottom: 1px solid #ddd;
   }
 }
@@ -192,26 +200,32 @@ main {
   li {
     display: inline-block;
     margin-right: 1em;
+    font: 0.688em "Tahoma", sans-serif;
     &::after {
-      content: ">";
+      content: "";
+      width: 4px;
+      height: 6px;
+      display: inline-block;
+      background: url('img/chevron-right.png');
       position: relative;
-      left: 0.5em;
+      left: 8px;
     }
     &:last-child::after {
       content: "";
+      background-image: none;
     }
   }
 
 }
 
 article {
-  margin: 30px 0;
+  margin: 25px 0;
   @include clearfix;
 
   h1 {
     color: #555393;
-    font-size: 1.125em;
-    margin-bottom: 1.5em;
+    font: 1.125em "Tahoma", sans-serif;
+    margin-bottom: 21px;
   }
 
   img {
@@ -233,13 +247,14 @@ footer {
     float: right;
     width: 127px;
     height: 33px;
+    margin-top: 5px;
   }
   .info {
     float: left;
   }
   p {
     color: white;
-    font: 0.688em "Tahoma";
+    font: 0.688em "Tahoma", sans-serif;
   }
 
   a, a:visited {

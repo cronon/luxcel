@@ -21,7 +21,7 @@ a, a:visited {
   background-size: contain;
   width: 174px;
   height: 74px;
-  color: transparent; }
+  text-indent: -999em; }
 
 header {
   padding: 25px;
@@ -32,35 +32,38 @@ header {
     display: block; }
   header .logo {
     position: absolute;
-    top: 0; }
+    top: 9px; }
   header nav::after {
     content: "";
     clear: both;
     display: block; }
   header ul {
-    float: right; }
+    float: right;
+    margin: 2px 8px 0 0; }
 
 .pages li {
   color: #0b4367;
-  font: 0.688em "Tahoma";
+  font: 0.688em "Tahoma", sans-serif;
   display: inline-block;
   padding: 0 0.5em;
   border-left: 1px solid #0b4367; }
   .pages li:first-child {
-    border-left: none; }
+    border-left: none;
+    padding-left: 0; }
 
 .banner {
   background: url(img/banner.png) center center no-repeat;
   border-top: 4px solid #a3bed4;
-  height: 100px; }
+  height: 102px;
+  margin-top: 5px; }
   .banner h2 {
-    margin: 31px 0 0 125px;
-    font: 1.875em "Myriad Pro";
+    margin: 29px 0 0 127px;
+    font: 1.875em "Myriad Pro", sans-serif;
     color: white;
     font-style: italic; }
 
 .main-nav {
-  padding: 0 0px 0 225px;
+  padding: 0 0px 0 221px;
   background: #edeef7;
   /* Old browsers */
   background: -moz-linear-gradient(top, #edeef7 0, #edeef7 15px, #d1d2eb 15px, #d1d2eb 31px, #a3a6d4 31px);
@@ -104,9 +107,9 @@ header {
   .main-nav > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
-    font: bold 0.875em "Myriad Pro";
+    font: bold 0.875em "Myriad Pro", sans-serif;
     text-shadow: 0 1px 1px white;
-    padding: 7px 15px 11px;
+    padding: 7px 7px 11px 15px;
     display: inline-block; }
 
 .dropdown-content {
@@ -119,7 +122,7 @@ header {
     display: block; }
   .dropdown-content li > a {
     color: #0b4367;
-    font: 0.688em "Tahoma";
+    font: 0.688em "Tahoma", sans-serif;
     padding: 8px 15px;
     display: block; }
     .dropdown-content li > a:hover, .dropdown-content li > a:focus, .dropdown-content li > a:active {
@@ -131,54 +134,62 @@ header {
 
 aside {
   float: left;
-  width: 225px;
-  min-width: 225px;
+  width: 221px;
+  min-width: 221px;
   background-color: #eee; }
   aside > h2 {
     color: white;
-    font: 1.125em "Myriad Pro";
+    font: 1.125em "Myriad Pro", sans-serif;
     text-transform: uppercase;
     background-color: #7371b1;
     padding: 3px 25px 5px; }
+  aside > nav {
+    margin-top: 18px; }
   aside > nav > ul {
     list-style-image: url(img/bullet.png);
-    font: 0.75em "Tahoma";
+    font: 0.75em "Tahoma", sans-serif;
     padding-left: 40px; }
     aside > nav > ul > li {
-      margin-top: 20px; }
+      margin-top: 12px; }
       aside > nav > ul > li.active, aside > nav > ul > li:hover {
         list-style-image: url(img/active-bullet.png); }
 
 main {
-  padding: 10px 40px 20px; }
+  padding: 5px 40px 20px; }
   main h2 {
-    font: 1.5em "Myriad Pro";
+    font: 1.5em "Myriad Pro", sans-serif;
     color: #0b4367;
-    padding: 15px 0;
+    padding: 15px 0 10px;
     border-bottom: 1px solid #ddd; }
 
 .breadcrumbs ol {
   list-style-type: none; }
 .breadcrumbs li {
   display: inline-block;
-  margin-right: 1em; }
+  margin-right: 1em;
+  font: 0.688em "Tahoma", sans-serif; }
   .breadcrumbs li::after {
-    content: ">";
+    content: "";
+    width: 4px;
+    height: 6px;
+    display: inline-block;
+    background: url("img/chevron-right.png");
     position: relative;
-    left: 0.5em; }
+    left: 8px; }
   .breadcrumbs li:last-child::after {
-    content: ""; }
+    content: "";
+    background-image: none; }
 
 article {
-  margin: 30px 0; }
+  margin: 25px 0; }
   article::after {
     content: "";
     clear: both;
     display: block; }
   article h1 {
     color: #555393;
-    font-size: 1.125em;
-    margin-bottom: 1.5em; }
+    font: 1.125em "Tahoma", sans-serif;
+    margin-bottom: 21px; }
   article img {
     float: left;
     margin: 0 1.5em 1em 0; }
@@ -196,12 +207,13 @@ footer {
   footer .logo {
     float: right;
     width: 127px;
-    height: 33px; }
+    height: 33px;
+    margin-top: 5px; }
   footer .info {
     float: left; }
   footer p {
     color: white;
-    font: 0.688em "Tahoma"; }
+    font: 0.688em "Tahoma", sans-serif; }
   footer a, footer a:visited {
     color: inherit;
     text-decoration: none; }
