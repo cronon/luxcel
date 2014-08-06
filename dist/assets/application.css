@@ -44,7 +44,7 @@ header {
     display: block; }
   header ul {
     float: right;
-    margin-top: 2px; }
+    margin: 2px 7px 0 0; }
 
 .pages li {
   color: #0b4367;
@@ -128,7 +128,7 @@ header {
   .dropdown-content li > a {
     color: #0b4367;
     font: 0.688em "Tahoma", sans-serif;
-    padding: 8px 15px;
+    padding: 6px 15px;
     display: block; }
     .dropdown-content li > a:hover, .dropdown-content li > a:focus, .dropdown-content li > a:active {
       background: #256893;
@@ -157,7 +157,7 @@ aside {
   aside > nav > ul {
     list-style-image: url(img/bullet.png);
     font: 0.75em "Tahoma", sans-serif;
-    padding-left: 40px; }
+    padding-left: 41px; }
     aside > nav > ul > li {
       margin-top: 12px; }
       aside > nav > ul > li.active, aside > nav > ul > li:hover {
@@ -166,7 +166,7 @@ aside {
 main {
   padding: 5px 40px 20px;
   float: right;
-  max-width: 649px;
+  max-width: calc(100% - 221px - 80px);
   background: white; }
   main h2 {
     font: 1.5em "Myriad Pro", sans-serif;
@@ -204,7 +204,7 @@ article {
     margin-bottom: 21px; }
   article img {
     float: left;
-    margin: 0 1.5em 1em 0; }
+    margin: 0 26px 1em 0; }
   article p {
     margin-bottom: 1.5em;
     font: 0.75em "Verdana", sans-serif; }

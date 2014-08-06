@@ -62,7 +62,7 @@ header{
 
   ul {
     float: right;
-    margin-top: 2px;
+    margin: 2px 7px 0 0;
   }
 }
 
@@ -144,7 +144,7 @@ $left-column-width: 221px;
   li > a {
     color: $link-color;
     font: 0.688em "Tahoma", sans-serif;
-    padding: 8px 15px;
+    padding: 6px 15px;
     display: block;
     &:hover, &:focus, &:active {
       background: #256893;
@@ -180,7 +180,7 @@ aside {
   > nav > ul {
     list-style-image: url(img/bullet.png);
     font: 0.75em "Tahoma", sans-serif;
-    padding-left: 40px;
+    padding-left: 41px;
     > li {
       margin-top: 12px;
       &.active, &:hover {
@@ -193,7 +193,7 @@ aside {
 main {
   padding: 5px 40px 20px;
   float: right;
-  max-width: 649px;
+  max-width: calc(100% - #{$left-column-width} - 80px);
   background: white;
   h2{
     font: 1.5em "Myriad Pro", sans-serif;
@@ -241,7 +241,7 @@ article {
 
   img {
     float: left;
-    margin: 0 1.5em 1em 0;
+    margin: 0 26px 1em 0;
   }
 
   p {
