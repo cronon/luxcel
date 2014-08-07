@@ -95,21 +95,21 @@ header{
   }
 }
 
-@mixin background-gradient($top, $bottom, $border ) {
+@mixin background-gradient($top, $bottom-top, $bottom-bottom, $border ) {
   background: $top; /* Old browsers */
-  background: -moz-linear-gradient(top, $top 0, $top 15px, $bottom 15px, $bottom 31px, $border 31px); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(15px,$top), color-stop(15px,$bottom), color-stop(31px,$bottom), color-stop(31px,$border)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* IE10+ */
-  background: linear-gradient(to bottom, $top 0%,$top 15px,$bottom 15px,$bottom 31px,$border 31px); /* W3C */
+  background: -moz-linear-gradient(top, $top 0, $top 15px, $bottom-top 15px, $bottom-bottom 31px, $border 31px); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(15px,$top), color-stop(15px,$bottom-top), color-stop(31px,$bottom-bottom), color-stop(31px,$border)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%,$top 15px,$bottom-top 15px,$bottom-bottom 31px,$border 31px); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%,$top 15px,$bottom-top 15px,$bottom-bottom 31px,$border 31px); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%,$top 15px,$bottom-top 15px,$bottom-bottom 31px,$border 31px); /* IE10+ */
+  background: linear-gradient(to bottom, $top 0%,$top 15px,$bottom-top 15px,$bottom-bottom 31px,$border 31px); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$border',GradientType=0 ); /* IE6-9 */
 }
 
 $left-column-width: 221px;
 .main-nav {
   padding: 0 0px 0 $left-column-width;
-  @include background-gradient(#edeef7, #d1d2eb, #a3a6d4);
+  @include background-gradient(#edeef7, #ddddf0, #c1c2e3, #a3a6d4);
   height: 35px;
   > ul > li {
     display: inline-block;
@@ -118,7 +118,7 @@ $left-column-width: 221px;
     &:hover > a, &:focus > a, &:active > a {
       color: white;
       text-shadow: none;
-      @include background-gradient(#b6d8e6, #458ab0, #2a6c97);
+      @include background-gradient(#b6d8e6, #74b2ce, #3b80a9, #2a6c97);
     }
   }
   > ul > li > a {
@@ -192,8 +192,7 @@ aside {
 
 main {
   padding: 5px 40px 20px;
-  float: right;
-  max-width: calc(100% - #{$left-column-width} - 80px);
+  margin-left: $left-column-width;
   background: white;
   h2{
     font: 1.5em "Myriad Pro", sans-serif;
